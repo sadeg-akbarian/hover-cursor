@@ -22,79 +22,59 @@ body {
 
 main {
   position: relative;
+  width: 50vmin;
+  height: 50vmin;
   _border: 3px solid black;
-  width: 60vh;
-  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-div:last-child {
-  width: 3rem;
-  height: 3rem;
-  background-color: rgb(70, 27, 226);
-  border-radius: 50%;
-}
-
-.left {
-  font-size: 4rem;
+div {
   position: absolute;
-  top: 50%;
-  left: -15%;
-  transform: translateY(-50%);
-  padding: 3rem;
-}
-
-.top {
-  font-size: 4rem;
-  position: absolute;
-  top: -13%;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 3rem;
-}
-
-.right {
-  font-size: 4rem;
-  position: absolute;
-  top: 50%;
-  left: 115%;
-  transform: translate(-100%, -50%);
-  padding: 3rem;
-}
-
-.buttom {
-  font-size: 4rem;
-  position: absolute;
-  top: 114%;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  padding: 3rem;
 }
 
 .ball {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: left, 0.55s;
-  transition: top, 0.55s;
-  transition: left, 0.55s;
-  transition: top, 0.55s;
+  width: 8vmin;
+  height: 8vmin;
+  border-radius: 50%;
+  background-color: rgb(90, 11, 192);
+  transition: transform 0.6s;
+}
+
+.arrows {
+  font-size: 3rem;
+  padding: 8vmin;
+}
+
+.left {
+  transform: translateX(-100%);
+}
+
+.top {
+  transform: translateY(-100%);
+}
+
+.right {
+  transform: translateX(100%);
+}
+
+.buttom {
+  transform: translateY(100%);
 }
 
 .left:hover ~ .ball {
-  left: 25%;
+  transform: translateX(-200%);
 }
 
 .top:hover ~ .ball {
-  top: 25%;
+  transform: translateY(-200%);
 }
 
 .right:hover ~ .ball {
-  left: 75%;
+  transform: translateX(200%);
 }
 
 .buttom:hover ~ .ball {
-  top: 75%;
+  transform: translateY(200%);
 }
-
-/* Füge media queries ein, S.15 unten*/
